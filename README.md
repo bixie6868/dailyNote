@@ -1,0 +1,2 @@
+"# dailyNote" 
+"# dailyNote" 
