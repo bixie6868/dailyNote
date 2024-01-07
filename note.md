@@ -21,3 +21,7 @@
 
 1. 尝试上周阅读论文中的PromptCap（让模型生成和问题相关的文本描述）
 2. 使用PromptCap相同思路，使用Gemini根据Original Caption、Image、Question、Answer生成和问题（entity）相关的图片描述Summary（即Summary中包含问题的答案），构建这样的数据集用于训练。
+
+1. 考虑如何提供样例（问题、图片等）可以更好的生成训练数据（包含问题答案的图片描述），待解决问题：如何在Gemini上使送入样例的问题和图片对应起来 
+2. 看相关论文思考如何将infoseek数据中的问题进行分解处理 
+3. 待讨论后更新 
