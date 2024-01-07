@@ -17,3 +17,7 @@
 * 加入样例的方式：
   - 问题，答案，原始caption，summary，多张Images (Gemini可以放入多张图片，但是问题是它无法将图片和问题进行一一对应，另外通过一些测试，有时输入10个问题，回答的结果却是9个或11个)
   - 问题、答案、原始caption，summary（暂时未尝试）
+二、下周工作计划
+
+1. 尝试上周阅读论文中的PromptCap（让模型生成和问题相关的文本描述）
+2. 使用PromptCap相同思路，使用Gemini根据Original Caption、Image、Question、Answer生成和问题（entity）相关的图片描述Summary（即Summary中包含问题的答案），构建这样的数据集用于训练。
