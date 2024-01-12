@@ -7,4 +7,6 @@
 ### 贡献：
 * 提出了边增强图对齐网络
 * 词对关系标记
+* 例子： NER ：(Curry,NBA) 属于是Per和Org，ER:(Curry,Thompson)关系是peer，然而他们的实体类别是per 和 per。所以MNER和MER是相辅相成的
+* conj ： 并列连词 "near" ，dobj ： 直接宾语"holding" **what** , nusbj : 名词性主语, **who** has
   
