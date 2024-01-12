@@ -1,4 +1,4 @@
-## Joint Multimodal Entity-Relation Extraction Based on Edge-Enhanced Graph Alignment Network and Word-Pair Relation Tagging
+## Joint Multimodal Entity-Relation Extraction Based on Edge-Enhanced Graph Alignment Network and Word-Pair Relation Tagging（AAAI 2023）
 * Edge-Enhanced Graph Alignment Network : 边增强图对齐网络
 * Word-Pair Relation Tagging ：单词对关系标记
 ### 动机：
