@@ -1,3 +1,6 @@
+## 探索除infoseek外的数据集A-OKVQA等数据集是否适用于当前方案
+### A-OKVQA 
+  * 图片是否基于CoCo
 ## Joint Multimodal Entity-Relation Extraction Based on Edge-Enhanced Graph Alignment Network and Word-Pair Relation Tagging（AAAI 2023）
 * Edge-Enhanced Graph Alignment Network : 边增强图对齐网络
 * Word-Pair Relation Tagging ：单词对关系标记
