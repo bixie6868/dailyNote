@@ -6,4 +6,5 @@
   *  Key, Value： 浅层存储的是表面信息shallow，越深层存储的信息越抽象即语义信息。
 ## 如何进行知识编辑：
 ### 引入外部帮助：
- * 
+ * 基于检索增强的半参数编辑模型（SERAC）
+ * IKE（in-context knowledge editing)
