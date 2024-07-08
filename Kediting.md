@@ -35,3 +35,10 @@
  * Reliability（可信度） ：衡量编辑成功率
  * Locality（局部性）：局部信息是否还能保持原来的信息
  * Generality（泛化性）：编辑成功的知识的泛化性（多模态：测试纯文本泛化性就是将文本换成一个相似的句子。测试视觉泛化性就是将图片换成一个相似的图片）
+## IKE实现：
+参见例子：http://10.1.1.12:18212/lab/workspaces/auto-D/tree/data1/Code/Edit/EasyEdit-main/tutorial-notebooks/EasyEdit_Example_IKE.ipynb
+### 具体实现方式:
+![image](https://github.com/bixie6868/dailyNote/assets/78329110/cc0355ad-805b-4e52-a60b-3f01e1d458f0)
+* copy:表示希望能够教会模型对于注入的新知识可以实现最基本的copy
+* update：知识编辑并不是简单的教LM去重复新知识，而是在编辑区域内更改prompt，提升问题难度
+* retain： 对于不属于其编辑区域的输入，应保持其原输出
