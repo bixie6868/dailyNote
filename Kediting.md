@@ -42,3 +42,6 @@
 * copy:表示希望能够教会模型对于注入的新知识可以实现最基本的copy
 * update：知识编辑并不是简单的教LM去重复新知识，而是在编辑区域内更改prompt，提升问题难度
 * retain： 对于不属于其编辑区域的输入，应保持其原输出
+* 将训练集train以上述形式存入，便于后续进行相似样例的检索：
+* ![image](https://github.com/bixie6868/dailyNote/assets/78329110/a9f376ae-519a-4312-aa4d-c7c312777896)
+
