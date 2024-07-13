@@ -44,4 +44,8 @@
 * retain： 对于不属于其编辑区域的输入，应保持其原输出
 * 将训练集train以上述形式存入，便于后续进行相似样例的检索：
 * ![image](https://github.com/bixie6868/dailyNote/assets/78329110/a9f376ae-519a-4312-aa4d-c7c312777896)
+## VLKEB 数据观察：
+* eval_multihop 包含 3174个样例其中包含对应于 原始不跳问题eval中的原始图片。
+* 如下图所示： 数据集eval中不包含port_new参数，同时eval_multihop中也可能包含不含有port_new参数，即不跳的情况
+* ![image](https://github.com/user-attachments/assets/b9eaac67-7cbd-4067-9550-e698107c31ab)
 
