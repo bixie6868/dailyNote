@@ -51,7 +51,7 @@
 * ![image](https://github.com/user-attachments/assets/b9eaac67-7cbd-4067-9550-e698107c31ab)
 * 问题：
   * 为什么加参数[HOP_NUM]之后，只是去预测portability?其他参数结果没有进行预测(其他指标)
-    * 尝试compute_icl_multimodal_edit_quality的部分代码注释去掉（不仅仅去预测port.)
+    * 尝试compute_icl_multimodal_edit_quality的部分代码注释去掉（不仅仅去预测port.)（log中5176行开始）
     * 论文所给出的指标是算所有样例如 编辑成功率的平均吗？
   * 只能预测多跳问题吗？如何预测不跳的问题
 
