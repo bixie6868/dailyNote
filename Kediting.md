@@ -43,7 +43,10 @@
 * update：知识编辑并不是简单的教LM去重复新知识，而是在编辑区域内更改prompt，提升问题难度
 * retain： 对于不属于其编辑区域的输入，应保持其原输出
 * image 在其中充当什么作用？
-    * 
+    * Reliability： 即输入想要编辑的prompt，并且输入Question即对应的图片，输出结果，同时衡量其正确性
+    * Generality： 问题更改为rephrase，或者是图片更改成raphrase_image，分别表示T-Gen和I-Gen
+    * Localoty: T-Loc即不输入image,只更改question为对应的loc_q。I-Loc即输入Loc-image 同时输入的是 m_loc_q.那么loc_q和m_loc_q的区别在哪里？：完全不想关，是不同的问题
+    * Portability: 分别评估1-hop,2-hop,3-hop,4-hop.实验主表中展示的是1-hop的结果。（其实数据集相对于eval只有1k多条，而eval有3k多跳，不太一样）
 * 将训练集train以上述形式存入，便于后续进行相似样例的检索：
 * ![image](https://github.com/bixie6868/dailyNote/assets/78329110/a9f376ae-519a-4312-aa4d-c7c312777896)
 * 2-hop结果：
@@ -58,5 +61,5 @@
   * 为什么加参数[HOP_NUM]之后，只是去预测portability?其他参数结果没有进行预测(其他指标)
     * 尝试compute_icl_multimodal_edit_quality的部分代码注释去掉（不仅仅去预测port.)（log中5176行开始,port 2 : 10132开始）
     * 论文所给出的指标是算所有样例如 编辑成功率的平均吗？
-  * 只能预测多跳问题吗？如何预测不跳的问题
+  * 只能预测多跳问题吗？如何预测不跳的问题(通过该代码实现！！)
 
