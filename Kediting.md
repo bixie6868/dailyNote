@@ -51,6 +51,8 @@
 * ![image](https://github.com/bixie6868/dailyNote/assets/78329110/a9f376ae-519a-4312-aa4d-c7c312777896)
 * 2-hop结果：
 * ![image](https://github.com/user-attachments/assets/fe12c925-c4c1-4abc-9636-7aed156a7173)
+* 不跳的实验结果：
+* ![image](https://github.com/user-attachments/assets/3ea5f571-7317-460b-9af1-13856896cc1f)
 
 ## VLKEB 数据观察：
 * eval_multihop 包含 3174个样例其中包含对应于 原始不跳问题eval中的原始图片。
