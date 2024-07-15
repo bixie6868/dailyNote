@@ -35,6 +35,17 @@
  * Reliability（可信度） ：衡量编辑成功率
  * Locality（局部性）：局部信息是否还能保持原来的信息
  * Generality（泛化性）：编辑成功的知识的泛化性（多模态：测试纯文本泛化性就是将文本换成一个相似的句子。测试视觉泛化性就是将图片换成一个相似的图片）
+
+## VLKEB 数据观察：
+* eval_multihop 包含 3174个样例其中包含对应于 原始不跳问题eval中的原始图片。
+* 如下图所示： 数据集eval中不包含port_new参数，同时eval_multihop中也可能包含不含有port_new参数，即不跳的情况。
+* 所以3174不仅包含了1278个一跳问题，包含一些多跳问题可能对应一张图片还包含有一些不跳的。所以全部的信息都保存在了eval_multihop的json文件中。
+* ![image](https://github.com/user-attachments/assets/b9eaac67-7cbd-4067-9550-e698107c31ab)
+* 问题：
+  * 为什么加参数[HOP_NUM]之后，只是去预测portability?其他参数结果没有进行预测(其他指标)
+    * 尝试compute_icl_multimodal_edit_quality的部分代码注释去掉（不仅仅去预测port.)（log中5176行开始,port 2 : 10132开始）
+    * 论文所给出的指标是算所有样例如 编辑成功率的平均吗？(展示的是port1，跳一次的结果portability)
+  * 只能预测多跳问题吗？如何预测不跳的问题(通过该代码实现！！)
 ## IKE实现：
 参见例子：http://10.1.1.12:18212/lab/workspaces/auto-D/tree/data1/Code/Edit/EasyEdit-main/tutorial-notebooks/EasyEdit_Example_IKE.ipynb
 ### 具体实现方式:
@@ -53,15 +64,8 @@
 * ![image](https://github.com/user-attachments/assets/fe12c925-c4c1-4abc-9636-7aed156a7173)
 * 不跳的实验结果：
 * ![image](https://github.com/user-attachments/assets/3ea5f571-7317-460b-9af1-13856896cc1f)
+## SERAC 方法简介和实现（基于检索增强的反事实半参数编辑模型）
 
-## VLKEB 数据观察：
-* eval_multihop 包含 3174个样例其中包含对应于 原始不跳问题eval中的原始图片。
-* 如下图所示： 数据集eval中不包含port_new参数，同时eval_multihop中也可能包含不含有port_new参数，即不跳的情况。
-* 所以3174不仅包含了1278个一跳问题，包含一些多跳问题可能对应一张图片还包含有一些不跳的。所以全部的信息都保存在了eval_multihop的json文件中。
-* ![image](https://github.com/user-attachments/assets/b9eaac67-7cbd-4067-9550-e698107c31ab)
-* 问题：
-  * 为什么加参数[HOP_NUM]之后，只是去预测portability?其他参数结果没有进行预测(其他指标)
-    * 尝试compute_icl_multimodal_edit_quality的部分代码注释去掉（不仅仅去预测port.)（log中5176行开始,port 2 : 10132开始）
-    * 论文所给出的指标是算所有样例如 编辑成功率的平均吗？(展示的是port1，跳一次的结果portability)
-  * 只能预测多跳问题吗？如何预测不跳的问题(通过该代码实现！！)
-
+### 问题：
+* 为什么SERAC同样基于外部知识库帮助的方法需要train？（是否是分别训练了Scope model和 Counterfactual model?）
+* BaseTrainer中调用其中的run(),进而训练函数的代码体现在multimodalTrainer中的train_step和edit_step函数中.
