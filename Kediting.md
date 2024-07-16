@@ -72,3 +72,8 @@
 * BaseTrainer中调用其中的run(),进而训练函数的代码体现在multimodalTrainer中的train_step和edit_step函数中.
 * 其中MultimodalTrainer中用到的self.model就是SERAC_MULTI，其中run_classifier和generate函数中分别显示了分类函数scope classifier(bert) > 0.5 才会使用下述counterfactual model(可能是vicuna)，微调31层，(位于trainer/algs/SERAC)
 * 一张A6000调不起来
+
+## 现有的方法缺点
+* 之前定位然后编辑的方法用在语言模型上，但是多模态模型这边不知道咋定位？
+* 如果直接用语言那边的定位方法就太像了，单单再加个图片可能效果也不好？
+* 样编辑跟视觉模态关系比较浅吗？
