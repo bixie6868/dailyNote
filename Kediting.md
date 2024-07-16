@@ -67,5 +67,6 @@
 ## SERAC 方法简介和实现（基于检索增强的反事实半参数编辑模型）
 
 ### 问题：
-* 为什么SERAC同样基于外部知识库帮助的方法需要train？（是否是分别训练了Scope model和 Counterfactual model?）
+* 为什么SERAC同样基于外部知识库帮助的方法需要train？（是否是分别训练了Scope model和 Counterfactual model?）只看到微调llava31层正如论文所示，其他的微调部分复杂没有仔细看
 * BaseTrainer中调用其中的run(),进而训练函数的代码体现在multimodalTrainer中的train_step和edit_step函数中.
+* 其中MultimodalTrainer中用到的self.model就是SERAC_MULTI，其中run_classifier和generate函数中分别显示了分类函数scope classifier(bert) > 0.5 才会使用下述counterfactual model(可能是vicuna)，微调31层，(位于trainer/algs/SERAC)
