@@ -89,3 +89,10 @@
   * 读论文ROME，了解如何定位-->再如何编辑。如果潜移到LVLM上如何定位编辑。
   * 如果是对图片进行编辑，比如现有的一些图片重构的（CVPR 2024好多工作）是否可以联系起来。
   * ROME以及后续编辑方法MEMIT的区别在哪里？ 用哪个进行复现？现有方法有哪些不好从而进行改进。
+  * Rome和llama编辑结果，没编辑和编辑后的结果是一样的。原因是否是使用的模型不同，比如在此处使用的模型是Llama-2-7b-chat-hf。而源代码只写了llama-2-7b
+  * ![image](https://github.com/user-attachments/assets/abd443ed-3da5-4f8d-9f9a-8db72f01cd4e)
+  * ![image](https://github.com/user-attachments/assets/ce1fde82-4987-486b-b085-5728e8cd1f87)
+  * ![image](https://github.com/user-attachments/assets/760a3966-473a-442b-bcdc-8920bf5ce12c)
+
+
+
