@@ -93,6 +93,17 @@
   * ![image](https://github.com/user-attachments/assets/abd443ed-3da5-4f8d-9f9a-8db72f01cd4e)
   * ![image](https://github.com/user-attachments/assets/ce1fde82-4987-486b-b085-5728e8cd1f87)
   * ![image](https://github.com/user-attachments/assets/760a3966-473a-442b-bcdc-8920bf5ce12c)
+  * 看了编辑部分的相关代码，如下是其模型图，含义是
+      * k*是用于选择主题词并在l层i_token处的键向量(subject),(ai表示在第l层的第 i 个令牌的注意力机制的输出。hi表示第l-1层第i个令牌的隐藏状态。k(x)用于计算给定文本x在特定层l和特定令牌索引i处的**输入**(Wfc是MLP的一个权重矩阵，y是一个归一化非线性激活函数)。
+      * ![image](https://github.com/user-attachments/assets/28b281e6-a4bd-4480-a15e-dc97e15741be)
+      * ![image](https://github.com/user-attachments/assets/84ba4740-fdf3-4a11-90db-7acbc598db1a)
+      * 下述是优化v*的目标函数L(z)，即表示在给定上下文xj 和 提示p 预测为更改后的 o *的概率最大化。
+      * ![image](https://github.com/user-attachments/assets/d6b590a6-541d-40d3-8db9-5762311fa59f)
+      * 在模型的权重矩阵中插入一个新的键值对(k*,v*)，而最小化对现有权重的干扰
+      * ![image](https://github.com/user-attachments/assets/4bad09c7-b69f-4abc-b899-51a7f1736006)
+
+
+
 
 
 
