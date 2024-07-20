@@ -103,7 +103,7 @@
       * ![image](https://github.com/user-attachments/assets/4bad09c7-b69f-4abc-b899-51a7f1736006)
 * ROME 定位部分Locate
   * ---正在看---
-
+### 计划：如何定位，然后编辑。能不能将该方法应用到多模态大模型上。
 
 
 
