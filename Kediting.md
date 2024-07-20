@@ -101,8 +101,8 @@
       * ![image](https://github.com/user-attachments/assets/d6b590a6-541d-40d3-8db9-5762311fa59f)
     * 在模型的权重矩阵中插入一个新的键值对(k*,v*)，而最小化对现有权重的干扰
       * ![image](https://github.com/user-attachments/assets/4bad09c7-b69f-4abc-b899-51a7f1736006)
-  * ROME 定位部分Locate
-    * ---正在看---
+* ROME 定位部分Locate
+  * ---正在看---
 
 
 
